@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>exol</title>
+	
+<style type="text/css">
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Helvetica Neue', Arial, sans-serif;}
+
+body {
+    background: linear-gradient(180deg, #b4c7d7 5%, #C5E91F 50%,#C5E91F 50%,  hsla(208,59%,24%,1.00)100%);
+    color: #111111;
+    min-height: 100vh;
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:hsla(208,59%,24%,1.00);
+    padding: 0 45px;
+    height: 60px;
+    position: sticky ;
+    top: 0;
+    z-index: 999;
+}
+
+#logo-area .brand-logo {
+    height: 150px;
+    width: auto;
+    display: block;
+margin: 70px 0px 9px 0px}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 0.80rem;
+    font-weight: bold;
+    font-style: italic;
+    color:hsla(226,21%,55%,1.00);
+    background-color:hsla(109,53%,6%,1.00);
+    padding: 6px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item:hover {color:#C5E91F}
+
+#audio-control img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+#frame-one {
+    display: flex;
+    padding: 60px 4px 0px 4px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#left-content-card {
+    background-color: rgba(246, 248, 251, 0.92);
+    padding: 45px 20px 100px ; margin-left: 20px;
+    border-radius: 24px;
+    max-width: 300px;
+box-shadow: -15px 20px 45px rgba(0,0,0,0.18);
+}
+
+#description {
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color:hsla(224,27%,49%,1.00);
+    margin-bottom: 25px;
+}
+
+#emphasized-text {
+    font-size: 0.96rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.45;
+    color: hsla(224,27%,49%,1.00);
+    margin-bottom: 35px;
+}
+
+#sub-description {
+    font-size: 0.96rem;
+    line-height: 1.45;
+    color:hsla(222,28%,49%,1.00);
+}
+
+#right-image-wrapper {
+    flex: 1;
+}
+
+#hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 60px;
+    box-shadow: -15px 20px 45px rgba(0,0,0,0.18);
+    display: block;
+background:hsla(219,29%,46%,1.00);margin: 0px 0px 200px 0px}
+
+
+#frame-delimiter {
+    background-color: #1c1e20;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 24px;
+}
+
+#icon{
+  position: fixed;     
+  bottom: 24px;        
+  left: 50%;           
+  transform: translateX(-50%);
+  
+  display: flex;       
+  gap: 12px;          
+  justify-content: center;
+  align-items: center;
+  z-index: 999;        
+}
+
+
+
+#stamp-watermark2{
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; font-size: 10rem;
+    font-weight: 900;
+    font-style:italic;
+    color:hsla(69,100%,48%,1.00); solid ;text-shadow: -15px 20px 4px  rgba(0,0,0,0.18)
+}
+
+	
+
+
+
+@media (max-width: 900px) {
+    #frame-one {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+    #left-content-card {
+        max-width: 100%;
+    }
+    #section-heading {
+        font-size: 3.2rem;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 15px;
+    }
+    #member-label {
+        font-size: 1.3rem;
+    }
+}
+section {
+
+  max-width:100%;
+
+  margin:0 auto;
+
+  padding:2em;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  align-items:center;
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.flex-container {
+  position: relative;
+  height: 1000px;
+  width: 95%;
+  display: -webkit-flex;
+ left: 48px;
+  display: flex;
+  overflow: hidden;;
+    border-radius: 45px
+}
+@media screen and (max-width: 768px) {
+
+.flex-container { flex-direction: column; }
+}
+
+.flex-title {
+  color:hsla(69,100%,48%,1.00);
+  position: relative;
+  font-size: 2vw;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  top: 15%;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+	
+	.flex-title a{
+  color:hsla(69,100%,48%,1.00);
+  position: relative;
+  font-size: 2vw;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  top: 15%;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;text-decoration:none
+}
+	
+@media screen and (max-width: 768px) {
+
+.flex-title { transform: rotate(0deg) !important; }
+}
+
+.flex-about {
+  opacity: 0;
+  color: #f1f1f1;
+  position: relative;
+  width: 70%;
+  font-size: 2vw;
+  padding: 5%;
+  top: 20%;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  line-height: 1.3;
+  margin: auto;
+  text-align: center;
+  transform: rotate(0deg);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+	
+	.flex-about a{
+  opacity: 5;
+  color: #f1f1f1;
+  position: relative;
+  width: 70%;
+  font-size: 2vw;
+  padding: 5%;
+  top: 20%;
+  margin: auto;
+  text-align: center;
+  transform: rotate(0deg);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+	
+
+@media screen and (max-width: 768px) {
+
+.flex-about {
+  padding: 0%;
+  border: 0px solid #f1f1f1;
+}
+}
+
+.flex-slide {
+  flex: 1 1 0;
+  cursor: pointer;
+  transition: flex 500ms ease;height: 100%; min-width:0
+}
+@media screen and (max-width: 768px) {
+
+.flex-slide {
+  overflow: auto;
+  overflow-x: hidden;
+}
+}
+ @media screen and (max-width: 768px) {
+
+.flex-slide p { font-size: 1em; }
+}
+ @media screen and (max-width: 768px) {
+
+.flex-slide ul li { font-size: 2em; }
+}
+
+.flex-slide:hover {
+  -webkit-flex-grow: 3;
+  flex-grow: 3;
+}
+
+.home {
+  background: url("d.opan.jpg");
+  background-size: cover;
+  background-position: center center;
+ 
+}
+@media screen and (min-width: 768px) {
+
+.home {
+  -moz-animation: aboutFlexSlide;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-delay: 0s;
+  -webkit-animation: aboutFlexSlide;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+  animation: aboutFlexSlide;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+}
+ @keyframes 
+aboutFlexSlide {  0% {
+ -webkit-flex-grow: 1;
+ flex-grow: 1;
+}
+ 50% {
+ -webkit-flex-grow: 3;
+ flex-grow: 3;
+}
+ 100% {
+ -webkit-flex-grow: 1;
+ flex-grow: 1;
+}
+}
+@media screen and (min-width: 768px) {
+
+.flex-title-home {
+  transform: rotate(90deg);
+  top: 15%;
+  -moz-animation: homeFlextitle;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-delay: 0s;
+  -webkit-animation: homeFlextitle;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+  animation: homeFlextitle;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+}
+ @keyframes 
+homeFlextitle {  0% {
+ transform: rotate(90deg);
+ top: 15%;
+}
+ 50% {
+ transform: rotate(0deg);
+ top: 15%;
+}
+ 100% {
+ transform: rotate(90deg);
+ top: 15%;
+}
+}
+
+.flex-about-home { opacity: 0; }
+@media screen and (min-width: 768px) {
+
+.flex-about-home {
+  -moz-animation: flexAboutHome;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-delay: 0s;
+  -webkit-animation: flexAboutHome;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+  animation: flexAboutHome;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+}
+ @keyframes 
+flexAboutHome {  0% {
+ opacity: 0;
+}
+ 50% {
+ opacity: 1;
+}
+ 100% {
+ opacity: 0;
+}
+}
+
+.about {
+  background:url("sehunpan.jpg");
+  background-size: cover;
+  background-position: center center;
+ 
+}
+
+.contact-form { width: 100%; }
+
+input { width: 100%; }
+
+textarea { width: 100%; }
+
+.contact {
+  background:url("chanyeolpan.jpg");
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.work1 {
+  background: url("laypan.jpg");
+  background-size: cover;
+  background-position: center center;
+ 
+}
+.work2 {
+  background: url("kaipan.jpg");
+  background-size: cover;
+  background-position: center center;
+ 
+}
+.work3 {
+  background: url("suhopan.jpg");
+  background-size: cover;
+  background-position: center center;
+ 
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+  margin-top: 0;
+  color: #fff;
+  font-size: 1em;
+}
+
+.cube1, .cube2 {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ @-webkit-keyframes 
+sk-cubemove {  25% {
+ -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+}
+ 50% {
+ -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+}
+ 75% {
+ -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+}
+ 100% {
+ -webkit-transform: rotate(-360deg);
+}
+}
+@keyframes 
+sk-cubemove {  25% {
+ transform: translateX(42px) rotate(-90deg) scale(0.5);
+ -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+}
+ 50% {
+ transform: translateX(42px) translateY(42px) rotate(-179deg);
+ -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+}
+ 50.1% {
+ transform: translateX(42px) translateY(42px) rotate(-180deg);
+ -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+}
+ 75% {
+ transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+ -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+}
+ 100% {
+ transform: rotate(-360deg);
+ -webkit-transform: rotate(-360deg);
+	}}
+	
+
+	#copyright
+	{color:hsla(71,72%,48%,1.00); font-size:20px; border-top: solid 3px hsla(71,72%,48%,1.00); padding: 5px 50px 50px 50px; margin:50px 50px 50px 50px;}
+
+	.copyright{color:hsla(71,72%,48%,1.00);}
+	
+	.section-heading2 {
+    color:hsla(206,55%,24%,1.00);
+    font-size: 5rem;
+    font-weight: 900;
+    top: 90px;
+    left: 4px;
+    z-index: 10;
+    letter-spacing: -2px;text-shadow: -15px 5px 0px rgba(0,0,0,0.18); margin-bottom: 50px; margin-left: 50PX
+}
+
+</style>
+<script src="jquery.min.js"></script>
+</head>
+	
+<body>
+<audio id="audio-track" src="crazy2.mp4"></audio>
+	
+<header id="navbar">
+<div id="logo-area">
+	<a href="https://www.youtube.com/watch?v=KH6ZwnqZ7Wo&list=RDKH6ZwnqZ7Wo&start_radio=1"><img src="exologo.png" alt="EXO Logo" class="brand-logo"></a>
+</div>
+<div class="nav-links">
+            <a href="index.html" class="nav-item">homepage</a>
+            <a href="album.html" class="nav-item">albums</a>
+            <a href="info.html" class="nav-item">info</a>
+	
+</div>
+<div id="audio-control">
+            <img src="button play.png" alt="Play Music" id="audio-toggle-btn">
+</div>
+</header>
+
+<div id="page-container">
+<div id="frame-one">
+            <div id="left-content-card">
+                <p id="description">
+                    EXO (엑소) is a 9-member South Korean boy group that currently consists of: Suho, Xiumin, Lay, Baekhyun, Chen, Chanyeol, D.O., Kai, and Sehun. On April 8, 2022, Lay announced his departure from SM Ent., no details regarding his possible future activities as an EXO member have been given, however, as of 2025 he has been removed as a member of EXO on SM's official website.
+                </p>
+                <p id="emphasized-text">
+                    Despite being removed from the official website, Lay did participating in EXO's upcoming comeback, REVERXE.
+                </p>
+                <p id="sub-description">
+                    Former members: Kris, Tao and Luhan. They debuted as a 12-member group on April 8, 2012, under SM Entertainment, with their first mini album, MAMA.Group Name Meaning: It’s short for EXOplanet
+Official Greeting: “We are ONE! Hello, we are EXO!”
+
+EXO Official Fandom Name: EXO-L
+Fandom Name Meaning: The “L” stands for love 
+                </p>
+            </div>
+	<li class="slider image">
+            <div id="right-image-wrapper">
+                <img src="realexo.jpg" alt="EXO Group Cut" id="hero-image">
+            </div></li>
+	 <div id="stamp-watermark2">L-1485</div>
+        </div>
+</div>
+  
+
+      
+	
+		<h3 class="section-heading2">MEMBER'S POSITION</h3>	
+<div class="flex-container">
+  <div class="spinner">
+    <p>
+    
+    <div class="cube1"></div>
+    <div class="cube2"></div>
+    Loading...
+    </p>
+  </div>
+
+  <div class="flex-slide home">
+    <div class="flex-title flex-title-home">D.O.
+	  </div>
+    <div class="flex-about flex-about-home">
+      <a href="https://kprofiles.com/d-o-do-kyungsoo-exo-profile/">Main Vocalist</a>
+    </div>
+  </div>
+  <div class="flex-slide about">
+    <div class="flex-title">
+	SEHUN</div>
+    <div class="flex-about">
+      <a href="https://kprofiles.com/sehun-exo-profile/">Lead Dancer</a>
+    </div>
+  </div>
+  <div class="flex-slide work1">
+    <div class="flex-title">
+		LAY</div>
+    <div class="flex-about">
+		<a href="https://kprofiles.com/lay-profile-facts-lay-exo-ideal-type/">Main Dancer</a>
+    </div>
+  </div>
+	  <div class="flex-slide work2">
+    <div class="flex-title">
+		KAI</div>
+    <div class="flex-about">
+     <a href="https://kprofiles.com/kai-exo-profile/">Main Dancer</a>
+    
+    </div>
+  </div>
+	  <div class="flex-slide work3">
+		  <div class="flex-title">SUHO</div>
+    <div class="flex-about">
+      <a href="https://kprofiles.com/suho-exo-profile/">Leader</a>
+      
+    </div>
+  </div>
+  <div class="flex-slide contact">
+    <div class="flex-title">CHANYEOL</div>
+    <div class="flex-about">
+		<a href="https://kprofiles.com/chanyeol-exo-profile/">Main Rapper</a>
+    </div>
+  </div>
+</div>
+	
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/2.2.0/jquery.waitforimages.min.js"></script> 
+
+	
+	
+<div id="icon">
+<a href="https://www.instagram.com/weareone.exo/"><img src="INSTA.png" alt="insta" width="50"></a>
+<a href="https://www.tiktok.com/@weareone.exo_official?lang=en-GB"><img src="TIKTOK.png" width="50" alt="tt"></a>
+<a href="https://www.youtube.com/@weareoneEXO"><img src="YOUTUBE.png" width="50" alt="YT"></a>
+</div>
+	
+<div id="copyright">
+	 <a href="https://www.instagram.com/ch4r_07?igsh=MThuNmg2aTNheHJobA%3D%3D&utm_source=qr"><span class="copyright">copyright by one and only. CLICK HERE!</span></a>
+</div>
+	
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/2.2.0/jquery.waitforimages.min.js"></script> 
+	
+	
+	<script>	
+$(document).ready(function() {
+    var audio = document.getElementById('audio-track');
+    var playBtn = $('#audio-toggle-btn');
+
+    playBtn.on('click', function() {
+        if (audio.paused) {
+            audio.play().catch(function(error) {
+                console.log("Playback prevented by browser: ", error);
+            });
+            
+        } else {
+            audio.pause();
+            
+        }
+    });
+});
+</script>
+	
+<script>
+
+(function(){
+		$('.flex-container').waitForImages(function() {
+			$('.spinner').fadeOut();
+	}, $.noop, true);
+	
+	$(".flex-slide").each(function(){
+		$(this).hover(function(){
+			$(this).find('.flex-title').css({
+				transform: 'rotate(0deg)',
+				top: '10%'
+			});
+			$(this).find('.flex-about').css({
+				opacity: '1'
+			});
+		}, function(){
+			$(this).find('.flex-title').css({
+				transform: 'rotate(90deg)',
+				top: '15%'
+			});
+			$(this).find('.flex-about').css({
+				opacity: '0'
+			});
+		})
+	});
+})();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+</body>
+</html>

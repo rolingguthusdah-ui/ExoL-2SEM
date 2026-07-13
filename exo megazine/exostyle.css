@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {background-color:#D8E3F4; border-left:#0B1707}
+
+#Logo{ margin: 40px 60px 0px 600px }
+
+#Navigate a:hover {color:#C5E91F}
+#PC{margin: 90px -900px 0px 900px; border-bottom: solid 50px }
+
+#kotak {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #191e24;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 10;}
+
+#info{background:#C5E91F; margin: 900px 5000px 200px -1120px; font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"; padding: -90px -500px -90px -500px}
+
+
+
+
+#Navigate {
+    display: flex;
+    gap: 20px;
+}
+
+#Navigate a{
+    text-decoration: none;
+    color: #8b949e;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 8px 22px;
+    border-radius: 20px;
+    background-color: #2e353d;
+    text-transform: lowercase;
+    transition: all 0.2s ease;
+}
+@media (max-width: 1595px){
+}
